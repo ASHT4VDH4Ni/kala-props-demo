@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALA PROPS LLP — Furniture on Rent | Mumbai &amp; Hyderabad</title>
+<meta name="description" content="KALA PROPS LLP — curated premium furniture on rent for homes, offices, events, film &amp; TV sets. White-glove delivery across Mumbai and Hyderabad.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Location chooser (first visit) ===== -->
+<div class="modal-overlay" id="locationModal" aria-hidden="true">
+  <div class="modal modal--location" role="dialog" aria-modal="true" aria-labelledby="locTitle">
+    <p class="tagline-mark">KALA&nbsp;PROPS</p>
+    <h2 id="locTitle">Choose your city</h2>
+    <p class="modal-sub">We stock and deliver from local warehouses, so we tailor availability by city.</p>
+    <div class="loc-grid">
+      <button class="loc-btn" data-city="Mumbai" data-phone="+91 81087 43156">
+        <span class="loc-name">Mumbai</span>
+        <span class="loc-note">Warehouse · Lower Parel</span>
+      </button>
+      <button class="loc-btn" data-city="Hyderabad" data-phone="+91 90000 12345">
+        <span class="loc-name">Hyderabad</span>
+        <span class="loc-note">Warehouse · Gachibowli</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== Announcement bar ===== -->
+<div class="announce">
+  <div class="announce__inner">
+    <span>White-glove delivery across <strong id="announceCity">Mumbai</strong> · Rentals from 1 day to 1 year</span>
+    <button class="announce__city" id="openLocationModal" aria-label="Change city">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 21s7-7.58 7-12A7 7 0 0 0 5 9c0 4.42 7 12 7 12Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg>
+      <span id="announceCity2">Mumbai</span> <span aria-hidden="true">▾</span>
+    </button>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#top" class="brand">
+      <span class="brand__mark">KP</span>
+      <span class="brand__wordmark">KALA&nbsp;PROPS<span class="brand__suffix">LLP</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="#collections">Collections</a>
+          <div class="mega" id="megaMenu">
+            <div class="mega__col">
+              <p class="mega__head">Living &amp; Dining</p>
+              <a href="#catalog" data-filter="Sofas">Sofas &amp; Diwans</a>
+              <a href="#catalog" data-filter="Dining">Dining Table &amp; Chairs</a>
+              <a href="#catalog" data-filter="Tables">Center &amp; Side Tables</a>
+              <a href="#catalog" data-filter="Storage">Cabinets &amp; Sideboards</a>
+            </div>
+            <div class="mega__col">
+              <p class="mega__head">Bed &amp; Bath</p>
+              <a href="#catalog" data-filter="Bedroom">King &amp; Queen Beds</a>
+              <a href="#catalog" data-filter="Bedroom">Bedside Tables</a>
+              <a href="#catalog" data-filter="Furnishings">Carpets &amp; Rugs</a>
+              <a href="#catalog" data-filter="Furnishings">Cushions &amp; Throws</a>
+            </div>
+            <div class="mega__col">
+              <p class="mega__head">Work &amp; Outdoor</p>
+              <a href="#catalog" data-filter="Office">Office &amp; Conference</a>
+              <a href="#catalog" data-filter="Outdoor">Outdoor &amp; Balcony</a>
+              <a href="#catalog" data-filter="Lighting">Lamps &amp; Lighting</a>
+              <a href="#catalog" data-filter="Decor">Decor &amp; Art</a>
+            </div>
+            <div class="mega__col mega__col--feature">
+              <p class="mega__head">Curated for</p>
+              <a href="#usecases">Film &amp; TV Sets</a>
+              <a href="#usecases">Weddings &amp; Events</a>
+              <a href="#usecases">Home Staging</a>
+              <a href="#usecases">Corporate Offices</a>
+              <span class="mega__tagimg" aria-hidden="true">Since Est. Mumbai</span>
+            </div>
+          </div>
+        </li>
+        <li><a href="#process">How Renting Works</a></li>
+        <li><a href="#usecases">Projects</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search catalog">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" id="wishlistToggle" aria-label="Wishlist">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 20.4S3.6 15.1 3.6 9.3A4.9 4.9 0 0 1 12 6a4.9 4.9 0 0 1 8.4 3.3c0 5.8-8.4 11.1-8.4 11.1Z" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="icon-badge" id="wishCount">0</span>
+      </button>
+      <button class="icon-btn" id="signInToggle" aria-label="Account">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20c1.6-3.4 4.6-5.2 7.5-5.2s5.9 1.8 7.5 5.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a href="#contact" class="tag-btn tag-btn--header" id="headerQuoteBtn">Get a Quote</a>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel">
+    <div class="search-panel__inner">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Search “dining table”, “office chair”, “diwan”…">
+      <button id="searchClose" aria-label="Close search">✕</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Mobile menu ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__list">
+    <a href="#collections">Collections</a>
+    <a href="#process">How Renting Works</a>
+    <a href="#usecases">Projects</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="tag-btn">Get a Quote</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__slides" id="heroSlides">
+      <div class="hero__slide is-active" style="--img:url('https://images.unsplash.com/photo-1555041469-a586c61ea9bc?q=80&w=1920&auto=format&fit=crop')"></div>
+      <div class="hero__slide" style="--img:url('https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?q=80&w=1920&auto=format&fit=crop')"></div>
+      <div class="hero__slide" style="--img:url('https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?q=80&w=1920&auto=format&fit=crop')"></div>
+    </div>
+    <div class="hero__scrim"></div>
+
+    <div class="hero__content">
+      <p class="eyebrow eyebrow--light"><span class="eyebrow__dot"></span>Curated Furniture Rental · Mumbai &amp; Hyderabad</p>
+      <h1 class="hero__title">Furniture worth<br><em>living&nbsp;with</em> — never<br>worth owning outright.</h1>
+      <p class="hero__sub">KALA PROPS outfits homes, offices, sets and stages with premium, design-forward furniture on flexible rental terms — delivered, styled, and swapped whenever your story changes.</p>
+      <div class="hero__cta">
+        <a href="#collections" class="btn btn--primary">Explore Collections</a>
+        <a href="#contact" class="btn btn--ghost">Request a Quote</a>
+      </div>
+    </div>
+
+    <div class="hero__tag" aria-hidden="true">
+      <div class="swing-tag swing-tag--float">
+        <span class="swing-tag__eyebrow">Est.</span>
+        <span class="swing-tag__big">2016</span>
+        <span class="swing-tag__small">Mumbai, India</span>
+      </div>
+    </div>
+
+    <div class="hero__dots" id="heroDots"></div>
+    <a href="#marquee" class="hero__scroll" aria-label="Scroll down"><span></span></a>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <section class="marquee" id="marquee">
+    <div class="marquee__track">
+      <span>SOFAS &amp; DIWANS</span><span>·</span><span>DINING SETS</span><span>·</span><span>OFFICE FURNITURE</span><span>·</span><span>OUTDOOR &amp; BALCONY</span><span>·</span><span>LAMPS &amp; LIGHTING</span><span>·</span><span>DECOR &amp; WALL ART</span><span>·</span><span>KIDS FURNITURE</span><span>·</span><span>SALON &amp; CAFE SETUPS</span><span>·</span>
+      <span>SOFAS &amp; DIWANS</span><span>·</span><span>DINING SETS</span><span>·</span><span>OFFICE FURNITURE</span><span>·</span><span>OUTDOOR &amp; BALCONY</span><span>·</span><span>LAMPS &amp; LIGHTING</span><span>·</span><span>DECOR &amp; WALL ART</span><span>·</span><span>KIDS FURNITURE</span><span>·</span><span>SALON &amp; CAFE SETUPS</span><span>·</span>
+    </div>
+  </section>
+
+  <!-- ===== Stats ===== -->
+  <section class="stats">
+    <div class="stats__grid">
+      <div class="stat"><span class="stat__num" data-count="6000">0</span><span class="stat__plus">+</span><p>Pieces in the collection</p></div>
+      <div class="stat"><span class="stat__num" data-count="1200">0</span><span class="stat__plus">+</span><p>Homes &amp; sets furnished</p></div>
+      <div class="stat"><span class="stat__num" data-count="48">0</span><span class="stat__plus">hr</span><p>Average delivery window</p></div>
+      <div class="stat"><span class="stat__num" data-count="9">0</span><span class="stat__plus">yrs</span><p>Curating premium interiors</p></div>
+    </div>
+  </section>
+
+  <!-- ===== Shop by Collection ===== -->
+  <section class="section" id="collections">
+    <div class="section__head">
+      <p class="eyebrow">The Range</p>
+      <h2 class="h2">Shop by <em>collection</em></h2>
+      <p class="section__sub">Twelve curated departments, each stocked for immediate rental — from a single accent chair to a full office fit-out.</p>
+    </div>
+
+    <div class="cat-grid" id="catGrid">
+      <!-- injected by JS -->
+    </div>
+  </section>
+
+  <!-- ===== Catalog / Featured pieces ===== -->
+  <section class="section section--sand" id="catalog">
+    <div class="section__head">
+      <p class="eyebrow">Featured Pieces</p>
+      <h2 class="h2">Ready to <em>rent</em>, right now</h2>
+      <p class="section__sub">A rotating edit of what's available this week. Every tag shows the daily rate — swap, extend or return whenever you like.</p>
+    </div>
+
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab is-active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="Sofas">Sofas</button>
+      <button class="filter-tab" data-filter="Dining">Dining</button>
+      <button class="filter-tab" data-filter="Bedroom">Bedroom</button>
+      <button class="filter-tab" data-filter="Office">Office</button>
+      <button class="filter-tab" data-filter="Outdoor">Outdoor</button>
+      <button class="filter-tab" data-filter="Lighting">Lighting</button>
+      <button class="filter-tab" data-filter="Decor">Decor</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <div class="section__foot">
+      <a href="#contact" class="btn btn--outline">View Full Catalogue</a>
+    </div>
+  </section>
+
+  <!-- ===== How renting works ===== -->
+  <section class="section section--dark" id="process">
+    <div class="section__head section__head--light">
+      <p class="eyebrow eyebrow--light">The Process</p>
+      <h2 class="h2 h2--light">Renting, made <em>effortless</em></h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="process-step__num">01</span>
+        <h3>Browse &amp; shortlist</h3>
+        <p>Explore the collection online or book a showroom walk-through. Save pieces to your wishlist as you go.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">02</span>
+        <h3>Get a tailored quote</h3>
+        <p>Tell us your tenure and space — we send a fitted quote within a few hours, no obligation.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">03</span>
+        <h3>White-glove delivery</h3>
+        <p>Our team delivers, assembles and styles every piece on your chosen date — usually within 48 hours.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">04</span>
+        <h3>Extend, swap or return</h3>
+        <p>Living evolves — so does your order. Extend the tenure, swap a piece, or schedule a free pickup.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Kala Props ===== -->
+  <section class="section" id="why">
+    <div class="section__head">
+      <p class="eyebrow">Why Kala Props</p>
+      <h2 class="h2">Ownership is optional.<br><em>Excellence</em> isn't.</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Curated, not generic</h3>
+        <p>Every piece is sourced and quality-checked by our in-house design team — no mismatched catalog fillers.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Styling included</h3>
+        <p>Complimentary layout advice from our stylists, so your space feels finished, not furnished.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Flexible tenure</h3>
+        <p>Rent for a single shoot day, a six-month lease, or an open-ended stay. Pricing scales with time, not against you.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Damage protection</h3>
+        <p>Every order is covered under our care plan — accidents happen, budgets shouldn't.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Same-day swaps</h3>
+        <p>Not the right shade of walnut? Swap it before the stylist has even left the building.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Pan-city logistics</h3>
+        <p>Our own fleet and warehouses across Mumbai and Hyderabad mean faster delivery, fewer middlemen.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Use cases / projects ===== -->
+  <section class="section section--sand" id="usecases">
+    <div class="section__head">
+      <p class="eyebrow">Where We Show Up</p>
+      <h2 class="h2">One warehouse.<br>Every <em>occasion</em>.</h2>
+    </div>
+
+    <div class="use-grid">
+      <a class="use-card use-card--wide" href="#contact">
+        <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?q=80&w=1400&auto=format&fit=crop" alt="Wedding and event furniture styling" loading="lazy">
+        <div class="use-card__label"><span>Weddings &amp; Events</span><p>Lounges, mandap seating &amp; bar setups</p></div>
+      </a>
+      <a class="use-card" href="#contact">
+        <img src="https://images.unsplash.com/photo-1478720568477-152d9b164e26?q=80&w=1000&auto=format&fit=crop" alt="Film and TV production set furniture" loading="lazy">
+        <div class="use-card__label"><span>Film &amp; TV Sets</span><p>Fast turnaround props</p></div>
+      </a>
+      <a class="use-card" href="#contact">
+        <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?q=80&w=1000&auto=format&fit=crop" alt="Corporate office furniture" loading="lazy">
+        <div class="use-card__label"><span>Corporate Offices</span><p>Desks to boardrooms</p></div>
+      </a>
+      <a class="use-card" href="#contact">
+        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?q=80&w=1000&auto=format&fit=crop" alt="Home staging furniture" loading="lazy">
+        <div class="use-card__label"><span>Home Staging</span><p>Move-in ready in 48h</p></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="section" id="testimonials">
+    <div class="section__head">
+      <p class="eyebrow">Client Notes</p>
+      <h2 class="h2">Trusted by <em>discerning</em> hosts</h2>
+    </div>
+
+    <div class="testi-track" id="testiTrack">
+      <blockquote class="testi is-active">
+        <p>“We furnished an entire pilot's set in four days. The pieces looked like they'd been chosen by our art director, not pulled off a rental sheet.”</p>
+        <footer><span>Radhika Menon</span><span>Line Producer, Mumbai</span></footer>
+      </blockquote>
+      <blockquote class="testi">
+        <p>“Our office move happened over one weekend — desks, chairs, even the boardroom table were installed before Monday's first call.”</p>
+        <footer><span>Arjun Shah</span><span>Operations Lead, Fintech Startup</span></footer>
+      </blockquote>
+      <blockquote class="testi">
+        <p>“Staged three flats for resale in a fortnight. Kala Props' stylist matched every unit's light and layout perfectly.”</p>
+        <footer><span>Farah Contractor</span><span>Real Estate Consultant</span></footer>
+      </blockquote>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </section>
+
+  <!-- ===== About / video ===== -->
+  <section class="about" id="about">
+    <div class="about__media">
+      <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1400&auto=format&fit=crop" alt="Inside the Kala Props warehouse and showroom" loading="lazy">
+      <button class="about__play" id="aboutPlay" aria-label="Play showroom video">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7L8 5Z"/></svg>
+      </button>
+    </div>
+    <div class="about__copy">
+      <p class="eyebrow">About Kala Props</p>
+      <h2 class="h2">A design studio<br>that happens to<br><em>rent furniture</em>.</h2>
+      <p>KALA PROPS LLP began as a props house for Mumbai's film industry and grew into a full-scale furniture rental studio for homes, offices and events. Every piece that leaves our warehouse has been chosen the way a set designer chooses a prop — for character, finish and fit.</p>
+      <p>Today we run dedicated warehouses in Mumbai and Hyderabad, a fleet for white-glove delivery, and an in-house styling team that treats every drop-off like a final walkthrough.</p>
+      <a href="#contact" class="link-arrow">Get to know our studio <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--sand" id="faq">
+    <div class="section__head">
+      <p class="eyebrow">Good to Know</p>
+      <h2 class="h2">Frequently asked</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item is-open">
+        <button class="faq-q">What's the minimum rental tenure?<span>+</span></button>
+        <div class="faq-a"><p>Most home and office pieces can be rented from one month, while event and production props are available by the day. Ask your account manager for tenure options on any listing.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you deliver and assemble?<span>+</span></button>
+        <div class="faq-a"><p>Yes — every order includes delivery, assembly and placement by our own crew, usually within 48 hours of confirmation.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if a piece gets damaged?<span>+</span></button>
+        <div class="faq-a"><p>All rentals are covered under our standard care plan for normal wear and accidental damage. Deliberate damage or loss is charged at replacement value.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I swap a piece mid-rental?<span>+</span></button>
+        <div class="faq-a"><p>Absolutely. Subject to availability, you can swap or add pieces at any point — we simply adjust your invoice pro-rata.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Which cities do you currently serve?<span>+</span></button>
+        <div class="faq-a"><p>We operate warehouses in Mumbai and Hyderabad today, with select deliveries to nearby districts. More cities are on the way.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact / Quote ===== -->
+  <section class="section contact" id="contact">
+    <div class="contact__panel">
+      <p class="eyebrow eyebrow--light">Get Started</p>
+      <h2 class="h2 h2--light">Tell us what<br>you're <em>furnishing</em>.</h2>
+      <p class="contact__sub">Share a few details and our team will send a tailored quote within office hours. No spam, no obligation.</p>
+      <ul class="contact__list">
+        <li><strong>Call</strong><span id="contactPhone">+91 8108743156</span></li>
+        <li><strong>Email</strong><span>hello@kalaprops.in</span></li>
+        <li><strong>Warehouse</strong><span id="contactAddress">Lower Parel, Mumbai</span></li>
+      </ul>
+      <a href="#" id="whatsappInline" class="link-arrow link-arrow--light" target="_blank" rel="noopener">Chat with us on WhatsApp <span>→</span></a>
+    </div>
+
+    <form class="contact__form" id="quoteForm" novalidate>
+      <div class="field">
+        <label for="qName">Full name</label>
+        <input type="text" id="qName" name="name" required placeholder="Your name">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="qPhone">Mobile number</label>
+          <input type="tel" id="qPhone" name="phone" required placeholder="10-digit mobile">
+        </div>
+        <div class="field">
+          <label for="qEmail">Email ID</label>
+          <input type="email" id="qEmail" name="email" required placeholder="you@email.com">
+        </div>
+      </div>
+      <div class="field">
+        <label for="qCategory">Interested in</label>
+        <select id="qCategory" name="category">
+          <option>Full Home Furnishing</option>
+          <option>Office Setup</option>
+          <option>Event / Wedding</option>
+          <option>Film / TV Production</option>
+          <option>Single Item Rental</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="qMessage">Tell us a little more (optional)</label>
+        <textarea id="qMessage" name="message" rows="3" placeholder="Space size, tenure, move-in date…"></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block">Submit Enquiry</button>
+      <p class="form-note" id="formNote">We usually respond within 4 working hours.</p>
+    </form>
+  </section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="site-footer__top">
+    <div class="footer-col footer-col--brand">
+      <a href="#top" class="brand brand--footer">
+        <span class="brand__mark">KP</span>
+        <span class="brand__wordmark">KALA&nbsp;PROPS<span class="brand__suffix">LLP</span></span>
+      </a>
+      <p>Premium furniture on rent for homes, offices, events and production sets across Mumbai &amp; Hyderabad.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+        <a href="#" aria-label="LinkedIn">IN</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>Collections</h4>
+      <a href="#collections">Sofas &amp; Diwans</a>
+      <a href="#collections">Dining &amp; Chairs</a>
+      <a href="#collections">Bedroom</a>
+      <a href="#collections">Office Furniture</a>
+      <a href="#collections">Outdoor Furniture</a>
+      <a href="#collections">Lamps &amp; Lighting</a>
+    </div>
+    <div class="footer-col">
+      <h4>Know More</h4>
+      <a href="#about">About Us</a>
+      <a href="#process">How Renting Works</a>
+      <a href="#usecases">Projects</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get in touch</h4>
+      <a href="#" id="footerPhoneLink">+91 81087 43156</a>
+      <a href="mailto:hello@kalaprops.in">hello@kalaprops.in</a>
+      <span class="footer-address" id="footerAddress">Lower Parel, Mumbai — 400013</span>
+      <button class="tag-btn tag-btn--footer" id="footerQuoteBtn">Get a Quote</button>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© <span id="year"></span> Kala Props LLP. All rights reserved.</span>
+    <span>Crafted for those who furnish beautifully, without the commitment.</span>
+  </div>
+</footer>
+
+<!-- ===== WhatsApp float ===== -->
+<a href="https://wa.me/918108743156?text=Hi!%20I'm%20interested%20in%20renting%20furniture%20from%20Kala%20Props.%20Could%20you%20help%20me%20with%20the%20details%3F" target="_blank" rel="noopener" class="whatsapp-float" id="whatsappFloat" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.06c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.11-4.86-4.3-.14-.19-1.17-1.55-1.17-2.96 0-1.4.74-2.09 1-2.38.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.28.75 1.24 1.62 2.01 1.11.99 2.04 1.3 2.32 1.45.28.14.44.12.6-.07.17-.19.71-.83.9-1.12.19-.28.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36Z"/></svg>
+</a>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<!-- ===== Quote / Sign-in modal ===== -->
+<div class="modal-overlay" id="quoteModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <button class="modal-close" data-close-modal>✕</button>
+    <p class="tagline-mark">KALA&nbsp;PROPS</p>
+    <h2 id="quoteModalTitle">Get quick details</h2>
+    <p class="modal-sub">Leave your number — an account manager will call within the hour.</p>
+    <form class="modal-form" id="modalQuoteForm">
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Mobile number" required>
+      <input type="email" placeholder="Email ID" required>
+      <button type="submit" class="btn btn--primary btn--block">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="signInModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="signInTitle">
+    <button class="modal-close" data-close-modal>✕</button>
+    <p class="tagline-mark">KALA&nbsp;PROPS</p>
+    <h2 id="signInTitle">Sign in</h2>
+    <p class="modal-sub">Access your orders, wishlist and quotes.</p>
+    <form class="modal-form" id="signInForm">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <a href="#" class="modal-forgot">Forgot password?</a>
+      <button type="submit" class="btn btn--primary btn--block">Login</button>
+    </form>
+    <p class="modal-switch">New here? <a href="#" id="switchToSignUp">Create an account</a></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
