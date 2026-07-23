@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KALA PROPS — Vintage &amp; Antique Props on Rent | Shoot Ready, Mumbai</title>
+<meta name="description" content="KALA PROPS — hand-picked antique and vintage props on rent: ceramics, brass curios, silverware and hand-painted tableware. Shoot-ready delivery across Mumbai.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ===== Announcement bar ===== -->
+<div class="announce">
+  <div class="announce__inner">
+    <span>Props on Rent · Shoot Ready in 24–48 hrs · Mumbai (Goregaon)</span>
+    <a href="tel:+919136810335" class="announce__phone">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6.6 10.8c1.4 2.8 3.8 5.2 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.7 21 3 13.3 3 4c0-.6.4-1 1-1h3.4c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1l-2.2 2.3Z" stroke="currentColor" stroke-width="1.4"/></svg>
+      9136810335
+    </a>
+  </div>
+</div>
+
+<!-- ===== Header ===== -->
+<header class="site-header" id="siteHeader">
+  <div class="site-header__inner">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <a href="#top" class="brand">
+      <span class="brand__mark">KP</span>
+      <span class="brand__wordmark">KALA&nbsp;PROPS<span class="brand__suffix">EST. GOREGAON, MUMBAI</span></span>
+    </a>
+
+    <nav class="main-nav" id="mainNav" aria-label="Primary">
+      <ul>
+        <li><a href="#collections">The Collection</a>
+          <div class="mega" id="megaMenu">
+            <div class="mega__col">
+              <p class="mega__head">Tabletop</p>
+              <a href="#catalog" data-filter="Ceramics">Ceramics &amp; Vases</a>
+              <a href="#catalog" data-filter="Tabletop">Tabletop Styling</a>
+              <a href="#catalog" data-filter="Silver">Silverware &amp; Trays</a>
+            </div>
+            <div class="mega__col">
+              <p class="mega__head">Metal &amp; Curios</p>
+              <a href="#catalog" data-filter="Brass">Brass &amp; Metalware</a>
+              <a href="#catalog" data-filter="Figurines">Vintage Figurines</a>
+              <a href="#catalog" data-filter="Garden">Garden &amp; Botanical</a>
+            </div>
+            <div class="mega__col">
+              <p class="mega__head">Light &amp; Occasion</p>
+              <a href="#catalog" data-filter="Candles">Candle &amp; Tealight</a>
+              <a href="#catalog" data-filter="Festive">Festive &amp; Period</a>
+            </div>
+            <div class="mega__col mega__col--feature">
+              <p class="mega__head">Booked For</p>
+              <a href="#travel">Film &amp; TV Sets</a>
+              <a href="#travel">Ad &amp; Editorial Shoots</a>
+              <a href="#travel">Festive Productions</a>
+              <span class="mega__tagimg" aria-hidden="true">Shoot Ready</span>
+            </div>
+          </div>
+        </li>
+        <li><a href="#process">How Booking Works</a></li>
+        <li><a href="#travel">Where We Travel</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="header-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search the collection">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <button class="icon-btn" id="wishlistToggle" aria-label="Wishlist">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><path d="M12 20.4S3.6 15.1 3.6 9.3A4.9 4.9 0 0 1 12 6a4.9 4.9 0 0 1 8.4 3.3c0 5.8-8.4 11.1-8.4 11.1Z" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span class="icon-badge" id="wishCount">0</span>
+      </button>
+      <button class="icon-btn" id="signInToggle" aria-label="Account">
+        <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="8" r="3.4" stroke="currentColor" stroke-width="1.6"/><path d="M4.5 20c1.6-3.4 4.6-5.2 7.5-5.2s5.9 1.8 7.5 5.2" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a href="#contact" class="tag-btn tag-btn--header" id="headerQuoteBtn">Request Props</a>
+    </div>
+  </div>
+
+  <div class="search-panel" id="searchPanel">
+    <div class="search-panel__inner">
+      <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><circle cx="11" cy="11" r="7" stroke="currentColor" stroke-width="1.6"/><path d="M21 21l-4.3-4.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="text" id="searchInput" placeholder="Search “brass horse”, “tealight holder”, “ginger jar”…">
+      <button id="searchClose" aria-label="Close search">✕</button>
+    </div>
+  </div>
+</header>
+
+<!-- ===== Mobile menu ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu__list">
+    <a href="#collections">The Collection</a>
+    <a href="#process">How Booking Works</a>
+    <a href="#travel">Where We Travel</a>
+    <a href="#about">About</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#contact" class="tag-btn">Request Props</a>
+  </div>
+</div>
+
+<main id="top">
+
+  <!-- ===== Hero ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__content">
+      <p class="eyebrow"><span class="rule-orn"><span class="rule-orn__mark"></span></span>Vintage &amp; Antique Props, On Rent</p>
+      <h1 class="hero__title">The patina takes<br>decades. Your <em>call<br>sheet</em> won't wait.</h1>
+      <p class="hero__sub">We rent hand-painted ceramics, tarnished brass curios, silverware and vintage tableware to stylists, photographers and production houses — catalogued, packed with care, and shoot-ready across Mumbai.</p>
+      <div class="hero__cta">
+        <a href="#collections" class="btn btn--primary">View the Collection</a>
+        <a href="#contact" class="btn btn--outline">Request Props</a>
+      </div>
+      <div class="hero__seal">
+        <span class="hero__seal-ring">KP</span>
+        <span>Goregaon, Mumbai<br>Curated &amp; hand-picked, piece by piece</span>
+      </div>
+    </div>
+
+    <div class="hero__plate">
+      <div class="hero__tape" aria-hidden="true"></div>
+      <div class="hero__frame">
+        <img src="assets/hero-tea-service.jpg" alt="Hand-painted rose bone china tea service" loading="eager">
+        <div class="hero__caption">
+          <span><strong>Rose Bone China Service</strong>Teapot, sugar, creamer &amp; 4 cups</span>
+          <span>Available</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Marquee ===== -->
+  <section class="marquee" id="marquee">
+    <div class="marquee__track">
+      <span>CERAMICS &amp; TABLEWARE</span><span>·</span><span>BRASS &amp; METALWARE</span><span>·</span><span>SILVERWARE &amp; TRAYS</span><span>·</span><span>CANDLE &amp; TEALIGHT</span><span>·</span><span>VINTAGE FIGURINES</span><span>·</span><span>FESTIVE &amp; PERIOD PROPS</span><span>·</span><span>GARDEN &amp; BOTANICAL</span><span>·</span>
+      <span>CERAMICS &amp; TABLEWARE</span><span>·</span><span>BRASS &amp; METALWARE</span><span>·</span><span>SILVERWARE &amp; TRAYS</span><span>·</span><span>CANDLE &amp; TEALIGHT</span><span>·</span><span>VINTAGE FIGURINES</span><span>·</span><span>FESTIVE &amp; PERIOD PROPS</span><span>·</span><span>GARDEN &amp; BOTANICAL</span><span>·</span>
+    </div>
+  </section>
+
+  <!-- ===== Facts strip ===== -->
+  <section class="facts">
+    <div class="facts__grid">
+      <div class="fact"><span class="fact__mark">✦</span><p>Hand-picked &amp; catalogued, piece by piece</p></div>
+      <div class="fact"><span class="fact__mark">✦</span><p>Packed and handled for fragile, antique surfaces</p></div>
+      <div class="fact"><span class="fact__mark">✦</span><p>Fast turnaround for tight call sheets</p></div>
+      <div class="fact"><span class="fact__mark">✦</span><p>Delivery across Mumbai, from our Goregaon warehouse</p></div>
+    </div>
+  </section>
+
+  <!-- ===== Shop by Collection ===== -->
+  <section class="section" id="collections">
+    <div class="section__head">
+      <p class="eyebrow">The Collection</p>
+      <h2 class="h2">Catalogued by <em>department</em></h2>
+      <p class="section__sub">Eight departments of hand-picked pieces, stocked and ready to travel to your set, styled shoot or store.</p>
+    </div>
+
+    <div class="cat-grid" id="catGrid"></div>
+  </section>
+
+  <!-- ===== Catalog / Featured pieces ===== -->
+  <section class="section section--sand" id="catalog">
+    <div class="section__head">
+      <p class="eyebrow">Featured Lots</p>
+      <h2 class="h2">Ready to <em>travel</em>, right now</h2>
+      <p class="section__sub">A rotating edit of what's currently in the warehouse. Every lot is photographed as-is — no two pieces are identical.</p>
+    </div>
+
+    <div class="filter-tabs" id="filterTabs">
+      <button class="filter-tab is-active" data-filter="all">All</button>
+      <button class="filter-tab" data-filter="Ceramics">Ceramics</button>
+      <button class="filter-tab" data-filter="Tabletop">Tabletop</button>
+      <button class="filter-tab" data-filter="Brass">Brass</button>
+      <button class="filter-tab" data-filter="Silver">Silver</button>
+      <button class="filter-tab" data-filter="Candles">Candles</button>
+      <button class="filter-tab" data-filter="Figurines">Figurines</button>
+      <button class="filter-tab" data-filter="Festive">Festive</button>
+      <button class="filter-tab" data-filter="Garden">Garden</button>
+    </div>
+
+    <div class="product-grid" id="productGrid"></div>
+
+    <div class="section__foot">
+      <a href="#contact" class="btn btn--outline">Request the Full Catalogue</a>
+    </div>
+  </section>
+
+  <!-- ===== How booking works ===== -->
+  <section class="section section--dark" id="process">
+    <div class="section__head">
+      <p class="eyebrow eyebrow--light">The Process</p>
+      <h2 class="h2 h2--light">Booking, made <em>simple</em></h2>
+    </div>
+
+    <div class="process-grid">
+      <div class="process-step">
+        <span class="process-step__num">01</span>
+        <h3>Browse the collection</h3>
+        <p>Explore by department online, or message us your mood board — we'll shortlist pieces that fit the brief.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">02</span>
+        <h3>Share your shoot brief</h3>
+        <p>Tell us the date, duration and quantity. We confirm availability and rates the same day.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">03</span>
+        <h3>We pack &amp; deliver</h3>
+        <p>Every piece is wrapped for its fragility and delivered to your set or studio, on schedule.</p>
+      </div>
+      <div class="process-step">
+        <span class="process-step__num">04</span>
+        <h3>Return after wrap</h3>
+        <p>We collect once the shoot wraps. Need it longer? Just let us know and we'll extend the booking.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Why Kala Props ===== -->
+  <section class="section" id="why">
+    <div class="section__head">
+      <p class="eyebrow">Why Kala Props</p>
+      <h2 class="h2">Every piece has<br>already <em>lived</em> a little.</h2>
+    </div>
+
+    <div class="why-grid">
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Hand-picked, not stocked</h3>
+        <p>Each piece is sourced and catalogued individually — you're seeing the actual item, not a generic reference photo.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Styling guidance</h3>
+        <p>Not sure what pairs well? We'll suggest a set based on your palette, era or brief — at no extra charge.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Fragile-safe handling</h3>
+        <p>Ceramics and glazed pieces are individually wrapped and padded for transit — breakage is rare by design.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Day-rate flexibility</h3>
+        <p>Rent for a single shoot day or a longer production run — pricing is quoted to fit your schedule.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Quick turnaround</h3>
+        <p>Tight call sheet? We move fast — message us and we'll confirm availability the same day.</p>
+      </div>
+      <div class="why-card">
+        <div class="why-card__icon">◆</div>
+        <h3>Mumbai-wide delivery</h3>
+        <p>Dispatched from our Goregaon warehouse to sets, studios and stores across the city.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Where we travel ===== -->
+  <section class="section section--sand" id="travel">
+    <div class="section__head">
+      <p class="eyebrow">Where We Travel</p>
+      <h2 class="h2">One warehouse.<br>Every kind of <em>set</em>.</h2>
+    </div>
+
+    <div class="travel-list">
+      <div class="travel-row">
+        <div class="travel-row__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M3 7l6 3 6-3 6 3v10l-6-3-6 3-6-3V7Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></div>
+        <h3>Film &amp; TV Sets</h3>
+        <p>Period-accurate tableware and curios for scenes that need real texture, not props-department plastic.</p>
+      </div>
+      <div class="travel-row">
+        <div class="travel-row__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="14" rx="1" stroke="currentColor" stroke-width="1.5"/><path d="M3 16l5-5 4 4 4-3 5 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Ad &amp; Editorial Shoots</h3>
+        <p>Styled tabletop pieces that photograph beautifully — brass, ceramics and glazework picked for how they catch light.</p>
+      </div>
+      <div class="travel-row">
+        <div class="travel-row__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 3v6M12 21v-6M4.2 7.8l4.2 3M15.6 13.2l4.2 3M19.8 7.8l-4.2 3M8.4 13.2l-4.2 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><circle cx="12" cy="12" r="2.4" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <h3>Festive &amp; Period Productions</h3>
+        <p>Hand-painted pumpkins, ceramic trees and seasonal pieces for productions built around a specific time of year.</p>
+      </div>
+      <div class="travel-row">
+        <div class="travel-row__icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M4 21V9l8-6 8 6v12" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M9 21v-7h6v7" stroke="currentColor" stroke-width="1.5"/></svg></div>
+        <h3>Retail &amp; Home Styling</h3>
+        <p>Finishing pieces for staged homes, showrooms and pop-ups — rented for the run of the display, not owned forever.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Testimonials ===== -->
+  <section class="section" id="testimonials">
+    <div class="section__head">
+      <p class="eyebrow">Client Notes</p>
+      <h2 class="h2">Trusted on <em>set</em></h2>
+    </div>
+
+    <div class="testi-track" id="testiTrack">
+      <blockquote class="testi is-active">
+        <p>“We needed a full period tabletop in two days flat. Kala Props sent pieces that actually matched the era — not the usual prop-house filler.”</p>
+        <footer><span>Art Director</span><span>Independent Film Production, Mumbai</span></footer>
+      </blockquote>
+      <blockquote class="testi">
+        <p>“Everything arrived individually wrapped and exactly as photographed. For fragile ceramics on a tight shoot day, that matters more than people realise.”</p>
+        <footer><span>Set Stylist</span><span>Commercial Ad Shoot</span></footer>
+      </blockquote>
+      <blockquote class="testi">
+        <p>“Our festive campaign needed hand-painted pieces we couldn't source anywhere else in time. Kala Props had them ready within the week.”</p>
+        <footer><span>Creative Producer</span><span>Brand Campaign Shoot</span></footer>
+      </blockquote>
+    </div>
+    <div class="testi-dots" id="testiDots"></div>
+  </section>
+
+  <!-- ===== About ===== -->
+  <section class="about" id="about">
+    <div class="about__media">
+      <img src="assets/lifestyle-vase-styled.jpg" alt="Hand-painted ceramic vases styled on a tabletop" loading="lazy">
+      <p class="about__media-cap">Indigo Blossom Ginger Jars, styled for a tabletop shoot</p>
+    </div>
+    <div class="about__copy">
+      <p class="eyebrow">About Kala Props</p>
+      <h2 class="h2">A collector's eye,<br>run like a <em>studio</em>.</h2>
+      <p>KALA PROPS is a props house built one piece at a time — hand-painted ceramics, tarnished brass, silverware and vintage tableware, sourced the way a collector shops rather than the way a warehouse restocks.</p>
+      <p>Every item that leaves our Goregaon warehouse has already been photographed, catalogued and checked over, so what you see is exactly what arrives on set — wrapped, on time, and ready to be returned once the shoot wraps.</p>
+      <a href="#contact" class="link-arrow">Get in touch with the studio <span>→</span></a>
+    </div>
+  </section>
+
+  <!-- ===== FAQ ===== -->
+  <section class="section section--sand" id="faq">
+    <div class="section__head">
+      <p class="eyebrow">Good to Know</p>
+      <h2 class="h2">Frequently asked</h2>
+    </div>
+    <div class="faq-list" id="faqList">
+      <div class="faq-item is-open">
+        <button class="faq-q">How far in advance should I book?<span>+</span></button>
+        <div class="faq-a"><p>As early as you can once a shoot date is locked — popular pieces move fast. That said, we regularly turn around requests within 24–48 hours, so last-minute call sheets are welcome too.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Do you deliver to the set or studio?<span>+</span></button>
+        <div class="faq-a"><p>Yes — we deliver and collect across Mumbai from our Goregaon warehouse. Share your location and shoot dates and we'll confirm logistics.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What if something fragile gets damaged?<span>+</span></button>
+        <div class="faq-a"><p>Normal handling on set is expected and covered. For breakage or loss, we'll work out fair replacement value with you before the booking is closed — we'll always talk it through first.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Can I rent a single piece, or only sets?<span>+</span></button>
+        <div class="faq-a"><p>Both — a single brass horse for a desk shot, or a full tabletop set for a banquet scene. Tell us the brief and we'll put together what fits.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How do I see the full catalogue?<span>+</span></button>
+        <div class="faq-a"><p>This site shows a rotating edit of what's in stock. For the complete, current catalogue, message us on WhatsApp or Instagram and we'll send it straight over.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Contact / Enquiry ===== -->
+  <section class="section contact" id="contact">
+    <div class="contact__panel">
+      <p class="eyebrow eyebrow--light">Get Started</p>
+      <h2 class="h2 h2--light">Tell us what<br>you're <em>styling</em>.</h2>
+      <p class="contact__sub">Share your shoot brief and dates — we'll confirm availability and rates the same day. No obligation.</p>
+      <ul class="contact__list">
+        <li><strong>Call / WhatsApp</strong><span id="contactPhone">+91 91368 10335</span></li>
+        <li><strong>Email</strong><span>kalaprops01@gmail.com</span></li>
+        <li><strong>Warehouse</strong><span id="contactAddress">Goregaon, Mumbai</span></li>
+      </ul>
+      <a href="#" id="whatsappInline" class="link-arrow link-arrow--light" target="_blank" rel="noopener">Chat with us on WhatsApp <span>→</span></a>
+    </div>
+
+    <form class="contact__form" id="quoteForm" novalidate>
+      <div class="field">
+        <label for="qName">Full name</label>
+        <input type="text" id="qName" name="name" required placeholder="Your name">
+      </div>
+      <div class="field-row">
+        <div class="field">
+          <label for="qPhone">Mobile number</label>
+          <input type="tel" id="qPhone" name="phone" required placeholder="10-digit mobile">
+        </div>
+        <div class="field">
+          <label for="qEmail">Email ID</label>
+          <input type="email" id="qEmail" name="email" required placeholder="you@email.com">
+        </div>
+      </div>
+      <div class="field">
+        <label for="qCategory">Interested in</label>
+        <select id="qCategory" name="category">
+          <option>Ceramics &amp; Tableware</option>
+          <option>Brass &amp; Metalware</option>
+          <option>Silverware &amp; Trays</option>
+          <option>Candle &amp; Tealight Holders</option>
+          <option>Vintage Figurines</option>
+          <option>Festive &amp; Period Props</option>
+          <option>Full Tabletop Styling</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="qMessage">Tell us a little more (optional)</label>
+        <textarea id="qMessage" name="message" rows="3" placeholder="Shoot type, dates, quantity needed…"></textarea>
+      </div>
+      <button type="submit" class="btn btn--primary btn--block">Submit Enquiry</button>
+      <p class="form-note" id="formNote">We usually respond within the same working day.</p>
+    </form>
+  </section>
+
+</main>
+
+<!-- ===== Footer ===== -->
+<footer class="site-footer">
+  <div class="site-footer__top">
+    <div class="footer-col footer-col--brand">
+      <a href="#top" class="brand brand--footer">
+        <span class="brand__mark">KP</span>
+        <span class="brand__wordmark">KALA&nbsp;PROPS</span>
+      </a>
+      <p>Hand-picked vintage and antique props on rent — ceramics, brass, silverware and tableware for shoots, sets and styled spaces across Mumbai.</p>
+      <div class="footer-social">
+        <a href="#" aria-label="Instagram">IG</a>
+        <a href="#" aria-label="Facebook">FB</a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h4>The Collection</h4>
+      <a href="#collections">Ceramics &amp; Tableware</a>
+      <a href="#collections">Brass &amp; Metalware</a>
+      <a href="#collections">Silverware &amp; Trays</a>
+      <a href="#collections">Candle &amp; Tealight</a>
+      <a href="#collections">Vintage Figurines</a>
+      <a href="#collections">Festive &amp; Period</a>
+    </div>
+    <div class="footer-col">
+      <h4>Know More</h4>
+      <a href="#about">About Us</a>
+      <a href="#process">How Booking Works</a>
+      <a href="#travel">Where We Travel</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact Us</a>
+    </div>
+    <div class="footer-col">
+      <h4>Get in Touch</h4>
+      <a href="tel:+919136810335" id="footerPhoneLink">+91 91368 10335</a>
+      <a href="mailto:kalaprops01@gmail.com">kalaprops01@gmail.com</a>
+      <span class="footer-address" id="footerAddress">Goregaon, Mumbai</span>
+      <button class="tag-btn tag-btn--footer" id="footerQuoteBtn">Request Props</button>
+    </div>
+  </div>
+  <div class="site-footer__bottom">
+    <span>© <span id="year"></span> Kala Props. All rights reserved.</span>
+    <span>Every piece has already lived a little.</span>
+  </div>
+</footer>
+
+<!-- ===== WhatsApp float ===== -->
+<a href="https://wa.me/919136810335?text=Hi!%20I'm%20interested%20in%20renting%20props%20from%20Kala%20Props.%20Could%20you%20help%20me%20with%20the%20details%3F" target="_blank" rel="noopener" class="whatsapp-float" id="whatsappFloat" aria-label="Chat on WhatsApp">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.46 1.32 4.96L2 22l5.29-1.39a9.87 9.87 0 0 0 4.75 1.21h.01c5.46 0 9.9-4.45 9.9-9.91C21.96 6.45 17.5 2 12.04 2Zm5.8 14.06c-.24.68-1.4 1.32-1.93 1.4-.5.08-1.11.11-1.79-.11-.41-.13-.94-.3-1.62-.6-2.86-1.24-4.72-4.11-4.86-4.3-.14-.19-1.17-1.55-1.17-2.96 0-1.4.74-2.09 1-2.38.26-.28.57-.35.76-.35.19 0 .38 0 .55.01.18.01.42-.07.65.5.24.58.81 2 .88 2.14.07.14.12.31.02.5-.1.19-.15.31-.29.48-.14.17-.3.37-.43.5-.14.14-.29.29-.12.57.17.28.75 1.24 1.62 2.01 1.11.99 2.04 1.3 2.32 1.45.28.14.44.12.6-.07.17-.19.71-.83.9-1.12.19-.28.38-.24.63-.14.26.09 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.17 1.36Z"/></svg>
+</a>
+
+<button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+<!-- ===== Quote / Sign-in modal ===== -->
+<div class="modal-overlay" id="quoteModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+    <button class="modal-close" data-close-modal>✕</button>
+    <p class="tagline-mark">KALA&nbsp;PROPS</p>
+    <h2 id="quoteModalTitle">Get quick details</h2>
+    <p class="modal-sub">Leave your number — we'll call to confirm availability.</p>
+    <form class="modal-form" id="modalQuoteForm">
+      <input type="text" placeholder="Name" required>
+      <input type="tel" placeholder="Mobile number" required>
+      <input type="email" placeholder="Email ID" required>
+      <button type="submit" class="btn btn--primary btn--block">Submit</button>
+    </form>
+  </div>
+</div>
+
+<div class="modal-overlay" id="signInModal" aria-hidden="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="signInTitle">
+    <button class="modal-close" data-close-modal>✕</button>
+    <p class="tagline-mark">KALA&nbsp;PROPS</p>
+    <h2 id="signInTitle">Sign in</h2>
+    <p class="modal-sub">Access your bookings, wishlist and enquiries.</p>
+    <form class="modal-form" id="signInForm">
+      <input type="email" placeholder="Email" required>
+      <input type="password" placeholder="Password" required>
+      <a href="#" class="modal-forgot">Forgot password?</a>
+      <button type="submit" class="btn btn--primary btn--block">Login</button>
+    </form>
+    <p class="modal-switch">New here? <a href="#" id="switchToSignUp">Create an account</a></p>
+  </div>
+</div>
+
+<div class="toast" id="toast"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
